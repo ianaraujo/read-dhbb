@@ -1,6 +1,6 @@
 # read-dhbb
 
-Código escrito em R para agrupar, ler e organizar os verbetes do Dicionário Histórico Bibliográfico Brasileiro em uma base de dados relacional.
+Código escrito em R para agrupar, ler e organizar os verbetes do Dicionário Histórico Bibliográfico Brasileiro em uma única tabela de dados relacionais. Salva e exporta os dados em um arquivo `.csv`.
 
 Os verbetes do Dicionário Histórico Bibliográfico Brasileiro podem ser acesados por qualquer pessoa em seu [repositório no GitHub](https://github.com/cpdoc/dhbb). No entanto, os verbetes estão dividios em arquivos de textos individuais, dentro do diretório ["text"](https://github.com/cpdoc/dhbb/tree/master/text), onde podem ser visualizados individulamente.
 
