@@ -47,6 +47,15 @@ base_verbetes$text <- str_trim(base_verbetes$text, side = "both")
 base_verbetes$sexo <- str_trim(base_verbetes$sexo, side = "both")
 base_verbetes$cargos <- str_trim(base_verbetes$cargos, side = "both")
 
+# Limpeza da variável "cargos" para separar o texto em uma lista
+
+# strsplit(base_verbetes$cargos[1], " -")
+
+base_verbetes <- base_verbetes %>%
+  mutate(cargos = as.list(strsplit(cargos, " - "))) %>%
+  mutate(cargos = purrr::map(cargos, ~ str_remove(.x, pattern = "^-"))) %>%
+  mutate(cargos = purrr::map(cargos, ~ str_trim(.x, side = "both")))
+
 # Removendo entradas que possuem 'sexo' == NA
 # Removendo instituições, associações, jornais, partidos políticos
 # Presença somente de verbetes de pessoas
