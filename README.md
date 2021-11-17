@@ -32,4 +32,4 @@ Sabendo que há um padrão entre todos os verbetes, é possível reunir os mais 
 
 O resultado final é uma base de dados, apresentando as variávies presentes nos metadados, e o corpus textual dos verbetes. 
 
-![Blabal](/img/screenshot.png)
+![Screenshot](/img/screenshot.png)
