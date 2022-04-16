@@ -1,4 +1,4 @@
-# Trabalho - Tópico 3 em Ciência Política
+# Trabalho Final A2 - Tópico III em Ciência Política
 # Prof. Jaqueline Zulini
 
 # install.packages("tidyverse")
@@ -9,7 +9,9 @@ library(here)
 
 # Importação dos arquivos .text para serem trabalhados no R
 
-lista_dados_brutos <- purrr::map(list.files(here("dhbb", "text"), full.names = T), ~ read.delim(file = .x, header = FALSE))
+files  <- list.files(here("dhbb", "text"), full.names = T)
+
+lista_dados_brutos <- purrr::map(files, ~ read.delim(file = .x, header = FALSE))
 
 verbetes <- purrr::map(lista_dados_brutos, ~ str_c(.x$V1, collapse = " ")) %>%
   do.call(rbind.data.frame, .)
